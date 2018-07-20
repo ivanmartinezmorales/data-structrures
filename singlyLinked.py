@@ -8,11 +8,11 @@ Then in the singlyLinked class, __init__ declares the head.
 '''
 
 # Creating a node:
-
 class Node:
     def __init__(self, data=None):
         self.data = data
         self.next = None
+        
 # Creating the single linked list        
 class singlyLinked:
     def __init__(self):
@@ -71,6 +71,8 @@ class singlyLinked:
             return
         
         prev.next = headValue.next
-        
         headValue = None
    
+# Calling our linkedlist
+our_list = singlyLinked()
+our_list.head = ("first item")
