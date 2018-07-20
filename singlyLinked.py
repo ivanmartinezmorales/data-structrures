@@ -3,8 +3,6 @@ Learning about linked lists!
 
 First, I created a class for nodes. The node holds data for every item in the linked list.
 Then in the singlyLinked class, __init__ declares the head. 
-
-
 '''
 
 # Creating a node:
@@ -88,6 +86,19 @@ our_list.head.next = l2
 l2.next = l3
 
 # Inserting a Node at the beginning of the list:
+our_list.insertFirst("zero-th item")
 
+# Inserting a node at the end of the list:
+our_list.insertLast("fourth item")
+
+# Inserting in the middle of the list:
+our_list.head.next = l3
+our_list.insertInside(our_list.head.next, "weird item")
+
+# Removing the weird node we just created:
+our_list.removeNode("weird item")
+
+# Printing our final list:
+our_list.print_list()
 
 
