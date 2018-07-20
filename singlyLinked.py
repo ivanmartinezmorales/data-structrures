@@ -3,6 +3,8 @@ Learning about linked lists!
 
 First, I created a class for nodes. The node holds data for every item in the linked list.
 Then in the singlyLinked class, __init__ declares the head. 
+
+
 '''
 
 # Creating a node:
@@ -50,6 +52,25 @@ class singlyLinked:
         newNode.next = middle_node.next
         middle_node.next = newNode
     
+    # Method to remove a given node in the linked list.
     def removeNode(self, node_to_remove):
+        headValue = self.head
+        if (headValue is not None):
+            if (headValue.data == node_to_remove):
+                self.head = headValue.next
+                headValue = None
+                return
+            
+        while (headValue is not None):
+            if headValue.data == node_to_remove:
+                break
+            prev = headValue
+            headValue = headValue.next
+            
+        if (headValue == None):
+            return
         
+        prev.next = headValue.next
+        
+        headValue = None
    
