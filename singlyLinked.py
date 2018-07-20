@@ -72,7 +72,22 @@ class singlyLinked:
         
         prev.next = headValue.next
         headValue = None
-   
-# Calling our linkedlist
+'''
+Here, I am calling our linked list, performing the following operations:
+-Creating the linked list as our_list
+-Creating three nodes, and linking them together. (l1, l2, l3)
+'''
 our_list = singlyLinked()
 our_list.head = ("first item")
+
+l2 = Node("second item")
+l3 = Node("third item")
+
+# Linking the three Nodes together
+our_list.head.next = l2
+l2.next = l3
+
+# Inserting a Node at the beginning of the list:
+
+
+
