@@ -1,5 +1,5 @@
 '''
-B I N A R Y T R E E S
+T R E E S
 
 A tree is a data structure were nodes are connected by their edges.
 Here are some properties:
