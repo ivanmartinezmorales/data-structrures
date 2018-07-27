@@ -8,9 +8,6 @@ class Node:
 		self.left = None
 		self.right = None
 
-	def get(self):
-		return data
-
 '''
 okay, got side tracked... will revisit thiss
 '''
