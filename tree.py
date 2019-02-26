@@ -1,6 +1,6 @@
 """
 Create Tree class
-Trees are non-linear data structures, comprised of nodes.
+Trees are non-linear data structures, built of nodes.
 """
 
 class TreeNode:
