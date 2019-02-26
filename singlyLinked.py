@@ -1,5 +1,8 @@
 """
 My implementation of a Singly Linked List.
+
+TODO: Work on remove_last() and remove_first() methods.
+TODO: Create a doubly linked list.
 """
 
 class Node:
