@@ -1,52 +1,47 @@
-'''
-T R E E S
+"""
+Create Tree class
+Trees are non-linear data structures, comprised of nodes.
+"""
 
-A tree is a data structure were nodes are connected by their edges.
-Here are some properties:
-
-One node is the root node
-Each node is associated with one parent node.
-Each node can have n number of children.
-
-In order to create a tree, we will create nodes. The nodes will be their own class
-they will have the following variables:
-- left
-- right
-- data
-'''
-
-class Node:
-    
+class TreeNode:
     def __init__(self, data):
         self.left = None
         self.right = None
         self.data = data
-
-'''
-Function to insert 
-'''
+    
     def insert(self, data):
         if self.data:
-            if data < self.data: 
-            # if our inserted node is less than the parent node, then insert left
+            if data < self.data: # the values going to the left
                 if self.left is None:
-                    self.left = Node(data)
+                    self.left = TreeNode(data)
                 else:
                     self.left.insert(data)
-            elif data > self.data:
-            # if our inserted data is greater than our parent node, insert right.
+                    
+            elif data > self.data: # the values going to the right
                 if self.right is None:
-                    self.right = Node(data)
+                    self.right = TreeNode(data)
                 else:
                     self.right.insert(data)
-        else:
-            self.data = data
-            
-    def printTree(self):
+                    
+            else:
+                self.data = data
+    
+    def print_tree(self):
         if self.left:
-            self.left.printTree()
+            self.left.print_tree() # Recursive call
         print(self.data)
         if self.right:
-            self.right.printTree()
+            self.right.print_tree() # Recursive call
             
-            
+    def find_node(self, data, parent=None):
+        if data < self.data:
+            if self.left is None:
+                return None, None
+            return self.left.find_node(data, self)
+        elif data > self.data:
+            if self.right is None:
+                return None, None
+            return self.right.find_node(data, self)
+        else:
+            return self, parent
+        
